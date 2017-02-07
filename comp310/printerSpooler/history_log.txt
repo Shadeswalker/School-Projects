@@ -1,0 +1,68 @@
+=========================================
+No requests in buffer, Printer 1 sleeps.
+-----------------------------------------
+
+=========================================
+No requests in buffer, Printer 2 sleeps.
+-----------------------------------------
+
+Client 1 has 4 pages to print, puts request in Buffer.
+Job ID: 16349, Source: 1, Duration: 4
+
+Printer 1 starts printing 4 pages
+
+Printer 1 finishes printing 4 pages
+
+=========================================
+No requests in buffer, Printer 1 sleeps.
+-----------------------------------------
+
+Client 2 has 15 pages to print, puts request in Buffer.
+Job ID: 16407, Source: 2, Duration: 15
+
+Printer 2 starts printing 15 pages
+
+Client 3 has 18 pages to print, puts request in Buffer.
+Job ID: 16415, Source: 3, Duration: 18
+
+Printer 1 starts printing 18 pages
+
+Client 4 has 14 pages to print, puts request in Buffer.
+Job ID: 16420, Source: 4, Duration: 14
+
+Printer 3 starts printing 14 pages
+
+Client 5 has 9 pages to print, puts request in Buffer.
+Printer 2 finishes printing 15 pages
+
+Job ID: 16471, Source: 5, Duration: 9
+
+Printer 2 starts printing 9 pages
+
+Printer 1 finishes printing 18 pages
+
+=========================================
+No requests in buffer, Printer 1 sleeps.
+-----------------------------------------
+
+Printer 3 finishes printing 14 pages
+
+=========================================
+No requests in buffer, Printer 3 sleeps.
+-----------------------------------------
+
+Printer 2 finishes printing 9 pages
+
+=========================================
+No requests in buffer, Printer 2 sleeps.
+-----------------------------------------
+
+
+=====/!\=====Printer 3 has quit=====/!\=====
+
+
+=====/!\=====Printer 2 has quit=====/!\=====
+
+
+=====/!\=====Printer 1 has quit=====/!\=====
+
