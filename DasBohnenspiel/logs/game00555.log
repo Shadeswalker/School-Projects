@@ -1,0 +1,15 @@
+# Server version 0.08 running on 192.168.0.133:8123
+# Game ID: 555
+# Board class: bohnenspiel.BohnenspielBoard
+# Timeout: 700
+# First Move Timeout: 30000
+# Date: Mon Apr 10 21:05:48 EDT 2017
+# Player 1: Player-0, 'RandomPlayer', running on localhost
+# Player 2: Player-1, '260623737', running on localhost
+START Player-0 RandomPlayer
+START Player-1 260623737
+PIT 0 0
+PIT 1 1
+PIT 0 1
+GAMEOVER TIMEOUT WINNER 0         Player-0 score: 0  Player-1 score: 0
+# Game ended: Mon Apr 10 21:06:17 EDT 2017

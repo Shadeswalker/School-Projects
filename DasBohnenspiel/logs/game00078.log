@@ -1,0 +1,45 @@
+# Server version 0.08 running on web100009.wireless.mcgill.ca:8123
+# Game ID: 78
+# Board class: bohnenspiel.BohnenspielBoard
+# Timeout: 700
+# First Move Timeout: 30000
+# Date: Sat Apr 08 11:24:53 EDT 2017
+# Player 1: Player-0, 'GreedyPlayer', running on localhost
+# Player 2: Player-1, 'RandomPlayer', running on localhost
+START Player-0 GreedyPlayer
+START Player-1 RandomPlayer
+PIT 0 0
+PIT 1 4
+PIT 0 4
+PIT 1 1
+PIT 0 0
+PIT 1 2
+PIT 0 1
+PIT 1 0
+PIT 0 0
+PIT 0 2
+PIT 1 1
+PIT 0 0
+PIT 0 2
+PIT 1 5
+PIT 0 4
+PIT 1 5
+PIT 0 0
+PIT 1 4
+PIT 0 0
+PIT 1 5
+PIT 0 2
+PIT 1 3
+PIT 0 0
+PIT 1 0
+PIT 0 5
+PIT 1 4
+PIT 0 3
+PIT 1 5
+PIT 0 0
+PIT 1 4
+PIT 0 2
+PIT 1 5
+PIT 0 0
+GAMEOVER WINNER 0         Player-0 score: 58  Player-1 score: 14
+# Game ended: Sat Apr 08 11:24:53 EDT 2017

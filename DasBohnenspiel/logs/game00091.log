@@ -1,0 +1,13 @@
+# Server version 0.08 running on web100009.wireless.mcgill.ca:8123
+# Game ID: 91
+# Board class: bohnenspiel.BohnenspielBoard
+# Timeout: 700
+# First Move Timeout: 30000
+# Date: Sat Apr 08 18:22:42 EDT 2017
+# Player 1: Player-0, 'RandomPlayer', running on web100009.wireless.mcgill.ca
+# Player 2: Player-1, '260623737', running on web100009.wireless.mcgill.ca
+START Player-0 RandomPlayer
+START Player-1 260623737
+PIT 0 0
+GAMEOVER TIMEOUT WINNER 0         Player-0 score: 0  Player-1 score: 0
+# Game ended: Sat Apr 08 18:23:13 EDT 2017

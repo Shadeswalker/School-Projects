@@ -1,0 +1,51 @@
+# Server version 0.08 running on wpa166142.wireless.mcgill.ca:8123
+# Game ID: 219
+# Board class: bohnenspiel.BohnenspielBoard
+# Timeout: 700
+# First Move Timeout: 30000
+# Date: Mon Apr 10 16:07:36 EDT 2017
+# Player 1: Player-0, '260623737', running on localhost
+# Player 2: Player-1, '260623737', running on localhost
+START Player-0 260623737
+START Player-1 260623737
+PIT 0 0
+PIT 1 0
+PIT 0 0
+PIT 1 1
+PIT 0 0
+PIT 1 2
+PIT 0 0
+PIT 1 3
+PIT 0 0
+PIT 1 0
+PIT 0 1
+PIT 1 0
+PIT 0 0
+PIT 1 4
+PIT 0 0
+PIT 1 0
+PIT 0 2
+PIT 1 0
+PIT 0 0
+PIT 1 1
+PIT 0 2
+PIT 1 5
+PIT 0 1
+PIT 1 0
+PIT 0 3
+PIT 1 2
+PIT 0 0
+PIT 1 3
+PIT 0 0
+PIT 1 4
+PIT 0 0
+PIT 1 5
+PIT 0 4
+PIT 1 3
+PIT 0 1
+PIT 1 5
+PIT 0 2
+PIT 0 3
+PIT 0 0
+GAMEOVER WINNER 0         Player-0 score: 46  Player-1 score: 26
+# Game ended: Mon Apr 10 16:07:37 EDT 2017
