@@ -1,3 +1,5 @@
+package SudokuSolver;
+
 import java.util.*;
 import java.io.*;
 
@@ -26,7 +28,7 @@ class Sudoku
     	while (x < N){
 	    	if (Grid[x][y]==0){
 	    		while (k<=N){
-					//System.out.printf("Checking if Grid[%d][%d]=%d works\n",x,y,k);
+	    			//System.out.printf("Checking if Grid[%d][%d]=%d works\n",x,y,k);
 	    			if (cellCheck(x, y, k)) {
 	    				st.push(k);			//remember these values
 						  st.push(y);			//stack has all the x,y,k that were changed
@@ -35,8 +37,8 @@ class Sudoku
 						  //System.out.printf("Value works. Setting Grid[%d][%d]= %d\n",x,y,k);
 						  k=1;
 						  break;
-					  } else if (k==N && !cellCheck(x, y, k)) { //if k= last value & doesnt work
-  						Grid[x][y] = 0;
+	    			} else if (k==N && !cellCheck(x, y, k)) { //if k= last value & doesnt work
+	    				Grid[x][y] = 0;
   						//System.out.printf("Grid[%d][%d] failed.\n",x,y);
   						if (st.empty()) {
   							//System.out.printf("Stack Empty. Bactracking...\n");
@@ -50,7 +52,7 @@ class Sudoku
   							continue;
   						}
   						x = st.pop();
-  	    			y = st.pop();
+  						y = st.pop();
   						k = st.pop() + 1;
   						//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
   						while (k==(N+1)) { //If last cell had value 9, backtrack again
@@ -67,23 +69,23 @@ class Sudoku
   								continue;
   							}
   							x = st.pop();
-  	    				y = st.pop();
+  							y = st.pop();
   							k = st.pop() + 1;
   							//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
 						  }
 						  continue;
-					  } else {
-						  k++;
-					  }
-				  }
+	    			} else {
+	    				k++;
+					}
+				}
 	    	} else {
-	    		//System.out.printf("/!\\ ");
+		    	//System.out.printf("/!\\ ");
 	    		x++;
-	    		if (x == N){ //reached cell [9][y] which doesn't exist so reset x
-	    			x = 0;
-	    			y++;
-	    			if (y == N){ //reached cell [8][9] which doesn't exist
-	    				//check to see if the sudoku is complete
+		    	if (x == N){ //reached cell [9][y] which doesn't exist so reset x
+		    		x = 0;
+		    		y++;
+		    		if (y == N){ //reached cell [8][9] which doesn't exist
+		    			//check to see if the sudoku is complete
 				        for (int row = 0; row<N; row++) {
 				        	for (int col = 0; col<N; col++) {
 				        		if (Grid[row][col] == 0) {
@@ -93,23 +95,16 @@ class Sudoku
 				        		}
 				        	}
 				        }
-	    				break;
-	    			}
-	    		}
+		    			break;
+		    		}
+		    	}
 	    	}
     	}
-
-
-
-    	
     }
 
     //returns True if the value k doesn't exist in the same row or column as Grid[row][col]
     public boolean cellCheck(int row, int col, int k)
     {
-    	int first = SIZE;
-    	int second = 2*SIZE;
-    	int third = 3*SIZE;
     	//check if that value already exists in this row
     	for (int i=0; i<N; i++)
     		if (Grid[row][i]==k) return false;
@@ -118,110 +113,16 @@ class Sudoku
        		if (Grid[j][col]==k) return false;
 
        	//check if that value already exist in this square
-       	if (row<first && col<first){ // first square
-       		for (int i=0; i<first; i++){
-       			for (int j=0; j<first; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=first && row<second)&&(col<first)) {
-       		for (int i=first; i<second; i++){
-       			for (int j=0; j<first; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=second && row<third)&&(col<first)) {
-       		for (int i=second; i<third; i++){
-       			for (int j=0; j<first; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row<first)&&(col>=first && col<second)) {
-       		for (int i=0; i<first; i++){
-       			for (int j=first; j<second; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=first && row<second)&&(col>=first && col<second)) {
-       		for (int i=first; i<second; i++){
-       			for (int j=first; j<second; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=second && row<third)&&(col>=first && col<second)) {
-       		for (int i=second; i<third; i++){
-       			for (int j=first; j<second; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row<first)&&(col>=second && col<third)) {
-       		for (int i=0; i<first; i++){
-       			for (int j=second; j<third; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=first && row<second)&&(col>=second && col<third)) {
-       		for (int i=first; i<second; i++){
-       			for (int j=second; j<third; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	} else if ((row>=second && row<third)&&(col>=second && col<third)) {
-       		for (int i=second; i<third; i++){
-       			for (int j=second; j<third; j++){
-       				if (Grid[i][j]==k) return false;
-       			}
-       		}
-       	}
-
-       	if (SIZE >= 4) {
-       		int fourth = 4*SIZE;
-
-       		if ((row>=third && row<fourth)&&(col<first)) {
-	       		for (int i=third; i<fourth; i++){
-	       			for (int j=0; j<first; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row>=third && row<fourth)&&(col>=first && col<second)) {
-	       		for (int i=third; i<fourth; i++){
-	       			for (int j=first; j<second; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row>=third && row<fourth)&&(col>=second && col<third)) {
-	       		for (int i=third; i<fourth; i++){
-	       			for (int j=second; j<third; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row>=third && row<fourth)&&(col>=third && col<fourth)) {
-	       		for (int i=third; i<fourth; i++){
-	       			for (int j=third; j<fourth; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row>=second && row<third)&&(col>=third && col<fourth)) {
-	       		for (int i=second; i<third; i++){
-	       			for (int j=third; j<fourth; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row>=first && row<second)&&(col>=third && col<fourth)) {
-	       		for (int i=first; i<second; i++){
-	       			for (int j=third; j<fourth; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} else if ((row<first)&&(col>=third && col<fourth)) {
-	       		for (int i=0; i<first; i++){
-	       			for (int j=third; j<fourth; j++){
-	       				if (Grid[i][j]==k) return false;
-	       			}
-	       		}
-	       	} 
-       	}
-
+       	int rstart = row - (row % SIZE);
+       	int cstart = col - (col % SIZE);
+       	for (int i=rstart; i<rstart+SIZE; i++) {
+    		for (int j=cstart; j<cstart+SIZE; j++){
+    			if (Grid[i][j]==k) {
+    				return false;
+    			}
+    		}
+    	}
+       	
         return true;
     }
 
