@@ -1,0 +1,10 @@
+<div class="login_box">
+	<h1><u>Create account</u></h1><br>
+		Oops! The passwords you entered didn't match. <br>Try again.<br><br>
+		<form action="/createaccount" method="post">
+			Username:<input type="text" name="username" value="<%= @username%>"><br>
+			Password:<input type="password" name="password"><br>
+			Re-enter password:<input type="password" name="password2"><br>
+			<input type="submit" value="Create!">
+		</form>
+</div>

@@ -1,0 +1,9 @@
+<h2>Welcome to the edit page!</h2>
+	<form method="post" action="/edit">
+		<p>
+			<label for="comments">What would you like to change?</label><br>
+			<textarea name="comments" id="comments" rows="20" cols="110"><%= @content%></textarea><br>
+			<input type="submit" value="Submit" >
+		</p>
+	</form>
+	<a href="/resethome">Restore to origin</a>

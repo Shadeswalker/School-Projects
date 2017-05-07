@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link href="/style.css" rel="stylesheet">
+		<title><%= @title%> | The Sax Page</title>
+		<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+	<div id="page_block">
+		<header>
+			<div id="title1">
+				<h1>The Sax Page</h1>
+				<h2>The smallest saxophone website ever made!</h2>
+			</div>
+			<div id="loginmenu">
+				<% if $credentials and $credentials[0] != ''%>
+						Logged in as : <br><b><%= $credentials[0] %></b><br>
+						<% if $can_edit %>
+							<a href="/admincontrols">Admin Controls</a><br>
+						<% end %>
+				<% end %><br><br>
+			</div>
+			<nav>
+					<ul>
+						<% if $credentials %>
+								<% if $credentials[0] != '' %>
+									<li><a href="/logout">Logout</a></li>
+								<% else %>	
+									<li><a href="/login">Login Now!</a></li>
+								<% end %>
+						<% else %>	
+							<li><a href="/login">Login Now!</a></li>
+						<% end %>
+						<li><a href="/edit">Edit</a></li>
+						<li><a href="/" id="home_button">Home</a></li>
+						<li><a href="/forum">Forum</a></li>
+						<li><a href="/about">About</a></li>
+					</ul>
+			</nav>
+		</header>
+		<div id="content">
+			<%= yield %>
+		</div>
+		<footer>
+		<p style="float:">
+			<% words = yield.split(" ") %>
+			<% wordcount = 0 %>
+			<% words.each do |w| %>
+				<% wordcount += 1 %>
+			<% end %>
+			
+			<% lines = yield.split("\n") %>
+			<% linecount = 0 %>
+			<% lines.each do |l| %>
+				<% linecount += 1 %>
+			<% end %>
+			Words : <%= wordcount%><br>
+			Lines : <%= linecount%>
+			</p>
+			<p>[Copyright 2014 : Arjun B. Gupta ID: 51443400]</p>
+		</footer>
+	</div>
+	</body>
+</html>

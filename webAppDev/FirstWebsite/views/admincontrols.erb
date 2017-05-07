@@ -1,0 +1,32 @@
+<h2>Admin Controls</h2>
+ 
+	<table>
+		<caption><h3>Users list</h3></caption>
+			<tr>
+				<th>Username</th>
+				<th>Account Creation Date</th>
+				<th>Admin Privileges</th>
+				<th>Give Privileges</th>
+				<th>Delete user</th>
+			</tr>
+			<% @allusers.each do |user| %> 
+			<tr>
+				<td><%= user.username %></td>
+				<td><%= user.creation_date %></td>
+				<td><%= user.edit %></td>
+				<td>
+					<form action="/user/<%= user.username %>" method="post" id="edit">
+						<input type="hidden" name="_method" value="put">
+						<input type="checkbox" name="edit" <%= "checked" if user.edit %>>
+						<input type="submit" value="Submit">
+					</form>
+				</td>
+				<td>
+					  <form action="/user/delete/<%= user.username %>" method="post">
+							<input type="hidden" name="_method" value="delete">
+							<input type="submit" value="Delete Account">
+					</form>
+				</td>
+			</tr>
+			<% end %>
+	</table>

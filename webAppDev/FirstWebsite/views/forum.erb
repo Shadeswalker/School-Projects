@@ -1,0 +1,21 @@
+<h3>Welcome to the forum</h3>
+<p>This page is meant for users to share their experience on the saxophone, their favourite artists, favourite songs... </p>
+
+<section>
+	<form action="/forum" method="post">
+		<textarea name="content" placeholder="Write here..."></textarea>
+		<input type="submit" value="Post!">
+	</form>
+</section>
+ 
+<% @posts.each do |post| %>
+	<article id="forum">
+		<p>
+			<%= post.content %>
+			<% if post.posted_by == $credentials[0] or $can_edit %>
+			<span><a href="/forum/<%= post.id %>">[edit]</a></span>
+			<% end %>
+		</p>
+		<p>Posted by: <u><%=post.posted_by %></u> on [<%=post.created_at %>]</p>
+	</article>
+<% end %>

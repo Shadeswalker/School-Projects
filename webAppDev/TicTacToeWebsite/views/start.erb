@@ -1,0 +1,73 @@
+<% if $playerturn%2 == 0 %>
+	<h2>Player 1, your turn to play!</h2>
+<% else %>
+	<h2>Player 2, your turn to play!</h2>
+<% end %>
+<form method='post' action='/start'>
+	<table>
+		<tr>
+			<td><% if $matrix[0] == "_" %>
+					<input type="radio" name="case" value="0">
+				<% else %>
+					<%= $matrix[0] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[1] == "_" %>
+					<input type="radio" name="case" value="1">
+				<% else %>
+					<%= $matrix[1] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[2] == "_" %>
+					<input type="radio" name="case" value="2">
+				<% else %>
+					<%= $matrix[2] %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td><% if $matrix[3] == "_" %>
+					<input type="radio" name="case" value="3">
+				<% else %>
+					<%= $matrix[3] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[4] == "_" %>
+					<input type="radio" name="case" value="4">
+				<% else %>
+					<%= $matrix[4] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[5] == "_" %>
+					<input type="radio" name="case" value="5">
+				<% else %>
+					<%= $matrix[5] %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td><% if $matrix[6] == "_" %>
+					<input type="radio" name="case" value="6">
+				<% else %>
+					<%= $matrix[6] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[7] == "_" %>
+					<input type="radio" name="case" value="7">
+				<% else %>
+					<%= $matrix[7] %>
+				<% end %>
+			</td>
+			<td><% if $matrix[8] == "_" %>
+					<input type="radio" name="case" value="8">
+				<% else %>
+					<%= $matrix[8] %>
+				<% end %>
+			</td>
+		</tr>
+	</table>
+<input type="submit" value="Play" />
+</form>
+<section>
+	<p><b><a href='/newgame'>New Game</a></b></p>
+</section>

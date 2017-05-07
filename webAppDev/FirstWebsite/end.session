@@ -1,0 +1,44 @@
+# SciTE session file
+
+buffer.1.path=C:\Users\Arjun Gupta\Desktop\First Website\webpage.rb
+buffer.1.position=633
+buffer.1.current=1
+
+buffer.2.path=C:\Users\Arjun Gupta\Desktop\First Website\public\style.css
+buffer.2.position=3175
+
+buffer.3.path=C:\Users\Arjun Gupta\Desktop\First Website\views\layout.erb
+buffer.3.position=416
+
+buffer.4.path=C:\Users\Arjun Gupta\Desktop\First Website\views\home.erb
+buffer.4.position=1674
+
+buffer.5.path=C:\Users\Arjun Gupta\Desktop\First Website\views\login.erb
+buffer.5.position=1
+
+buffer.6.path=C:\Users\Arjun Gupta\Desktop\First Website\views\admincontrols.erb
+buffer.6.position=1
+
+buffer.7.path=C:\Users\Arjun Gupta\Desktop\First Website\views\edit.erb
+buffer.7.position=331
+
+buffer.8.path=C:\Users\Arjun Gupta\Desktop\First Website\views\learnmore.erb
+buffer.8.position=8
+
+buffer.9.path=C:\Users\Arjun Gupta\Desktop\First Website\views\about.erb
+buffer.9.position=228
+
+buffer.10.path=C:\Users\Arjun Gupta\Desktop\First Website\views\createaccount.erb
+buffer.10.position=1
+
+buffer.11.path=C:\Users\Arjun Gupta\Desktop\First Website\views\denied.erb
+buffer.11.position=96
+
+buffer.12.path=C:\Users\Arjun Gupta\Desktop\First Website\views\loginfailed.erb
+buffer.12.position=181
+
+buffer.13.path=C:\Users\Arjun Gupta\Desktop\First Website\views\notfound.erb
+buffer.13.position=105
+
+buffer.14.path=C:\Users\Arjun Gupta\Desktop\First Website\views\noaccount.erb
+buffer.14.position=53

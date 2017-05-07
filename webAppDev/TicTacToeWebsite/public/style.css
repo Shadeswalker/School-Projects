@@ -1,0 +1,132 @@
+body
+{
+	background-color: #f7d3a8;
+	color : #181818 ;
+	font-family : "Open Sans", Arial, "Times New Roman", sans-serif;
+	font-size : 1em;
+}
+
+#content
+{
+	text-align: center;
+}
+
+section
+{
+	text-align: center;
+}
+
+#page_block
+{
+	width : 900px;
+	margin : auto;
+}
+
+h1, h2, h3, h4
+{
+	color :#181818;
+	font-family : "Arial", cursive;
+	font-weight : normal;
+}
+
+header
+{
+    font-family: "Times New Roman", sans-serif;
+    background: url('separator.png') repeat-x bottom;
+}
+
+#title1
+{
+	text-shadow: 4px 4px 6px black;
+	float : right;
+}
+
+header h1
+{
+    font-size: 2.5em;
+    font-weight: normal;
+    display: inline-block;
+	margin-bottom: 0;
+}
+
+header h2
+{
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+nav
+{
+	font-family : Arial, cursive;
+	display: inline-block;
+	width: 900px;
+	text-align: center;
+}
+
+#home_button
+{
+	border : 5px #760001 double;
+	background : #b04446;
+	border-radius : 15px;
+	font-size : 2.5em;
+	box-shadow: 4px 4px 4px black;
+}
+
+#home_button:hover
+{
+	color : white
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+footer
+{
+	text-align : center;
+}
+
+table
+{
+	margin : auto;
+	margin-top : 50px;
+	border: 2px black solid;
+	border-collapse: collapse;
+}
+
+td
+{
+	border : 2px black solid;
+	padding : 20px;
+}
+
+td:hover
+{
+	background-color: red;
+}
+
+section a
+{
+	color : black;
+}
