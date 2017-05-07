@@ -29,53 +29,53 @@ class Sudoku
 					//System.out.printf("Checking if Grid[%d][%d]=%d works\n",x,y,k);
 	    			if (cellCheck(x, y, k)) {
 	    				st.push(k);			//remember these values
-						st.push(y);			//stack has all the x,y,k that were changed
+						  st.push(y);			//stack has all the x,y,k that were changed
 	    				st.push(x);
-						Grid[x][y] = k;		//when cellCheck returns true, set Grid[x][y] to k
-						//System.out.printf("Value works. Setting Grid[%d][%d]= %d\n",x,y,k);
-						k=1;
-						break;
-					} else if (k==N && !cellCheck(x, y, k)) { //if k= last value & doesnt work
-						Grid[x][y] = 0;
-						//System.out.printf("Grid[%d][%d] failed.\n",x,y);
-						if (st.empty()) {
-							//System.out.printf("Stack Empty. Bactracking...\n");
-							//System.out.printf("Cell [%d][%d]\n", x,y);
-							x++;
-							if (x == N){ //reached cell [9][y] which doesn't exist so rest x
-	    						x = 0;
-	    						y++;
-	    					}
-							k = 1;
-							continue;
-						}
-						x = st.pop();
-	    				y = st.pop();
-						k = st.pop() + 1;
-						//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
-						while (k==(N+1)) { //If last cell had value 9, backtrack again
-							Grid[x][y] = 0;
-							if (st.empty()) {
-								//System.out.printf("Stack Empty. Bactracking...\n");
-								//System.out.printf("Cell [%d][%d]\n", x,y);
-								x++;
-								if (x == N){ //reached cell [9][y] which doesn't exist so rest x
-		    						x = 0;
-		    						y++;
-		    					}
-								k = 1;
-								continue;
-							}
-							x = st.pop();
-	    					y = st.pop();
-							k = st.pop() + 1;
-							//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
-						}
-						continue;
-					} else {
-						k++;
-					}
-				}
+						  Grid[x][y] = k;		//when cellCheck returns true, set Grid[x][y] to k
+						  //System.out.printf("Value works. Setting Grid[%d][%d]= %d\n",x,y,k);
+						  k=1;
+						  break;
+					  } else if (k==N && !cellCheck(x, y, k)) { //if k= last value & doesnt work
+  						Grid[x][y] = 0;
+  						//System.out.printf("Grid[%d][%d] failed.\n",x,y);
+  						if (st.empty()) {
+  							//System.out.printf("Stack Empty. Bactracking...\n");
+  							//System.out.printf("Cell [%d][%d]\n", x,y);
+  							x++;
+  							if (x == N){ //reached cell [9][y] which doesn't exist so reset x
+  	    						x = 0;
+  	    						y++;
+  	    					}
+  							k = 1;
+  							continue;
+  						}
+  						x = st.pop();
+  	    			y = st.pop();
+  						k = st.pop() + 1;
+  						//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
+  						while (k==(N+1)) { //If last cell had value 9, backtrack again
+  							Grid[x][y] = 0;
+  							if (st.empty()) {
+  								//System.out.printf("Stack Empty. Bactracking...\n");
+  								//System.out.printf("Cell [%d][%d]\n", x,y);
+  								x++;
+  								if (x == N){ //reached cell [9][y] which doesn't exist so rest x
+  		    						x = 0;
+  		    						y++;
+  		    					}
+  								k = 1;
+  								continue;
+  							}
+  							x = st.pop();
+  	    				y = st.pop();
+  							k = st.pop() + 1;
+  							//System.out.printf("Backracking to Cell [%d][%d], %d\n", x,y,k);
+						  }
+						  continue;
+					  } else {
+						  k++;
+					  }
+				  }
 	    	} else {
 	    		//System.out.printf("/!\\ ");
 	    		x++;
@@ -278,7 +278,7 @@ class Sudoku
     {
         StringBuffer result = new StringBuffer();
         int currentChar = in.read();
-	String whiteSpace = " \t\r\n";
+        String whiteSpace = " \t\r\n";
         // Ignore any leading white space
         while( whiteSpace.indexOf(currentChar) > -1 ) {
             currentChar = in.read();
